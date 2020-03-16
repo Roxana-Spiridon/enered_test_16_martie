@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coloane</title>
+    <style>
+
+        .boss-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            min-width: 1100px;
+            width: 1100px;
+            height: 900px;
+        }
+
+        .box {
+            position: relative;
+            height: 300px;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px 5px #cccccc;
+            margin: 20px;
+        }
+
+        .line {
+            border: 1px solid red;
+            width: 50px;
+            transition: all 0.2s ease-in;
+        }
+
+        .title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            padding-top: 20px;
+        }
+
+        .box-text {
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            color: grey;
+            padding: 20px 40px;
+        }
+
+        .intro-text {
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-top: 0;
+            padding-bottom: 80px;
+            font-size: 17px;
+        }
+
+        .title-box-text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            padding-top: 45px;
+            transition: all 0.2s ease-in;
+        }
+
+        .bubble-icon {
+            position: absolute;
+            left: 115px;
+            top: -45px;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background: lightcoral;
+            z-index: 0;
+        }
+
+        .inner-box-content {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            z-index: 1;
+            background-color: #ffffff;
+            transition: background-color 0.2s ease-in;
+        }
+
+        .box:hover .inner-box-content {
+            background-color: lightyellow;
+        }
+
+        .box:hover .title-box-text {
+            transform: scale(1.1);
+        }
+
+        .box:hover .bubble-icon {
+            z-index: 2;
+        }
+
+        .box:hover .line {
+            width: 70px;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Our services</h1>
+    <p class="intro-text box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.</p>
+
+    <div class="boss-container">
+        <div class="container">
+            <div class="box box1">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">UI / UX Designing</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                    <div class="bubble-icon"></div>
+            </div>
+
+            <div class="box">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">Virtual Reality</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="bubble-icon"></div>
+            </div>
+
+            <div class="box">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">Geographical Services</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="bubble-icon"></div>
+            </div>
+
+            <div class="box">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">Publishing Services</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="bubble-icon"></div>
+            </div>
+
+            <div class="box">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">Mapping & Locations</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="bubble-icon"></div>
+            </div>
+
+            <div class="box">
+                <div class="inner-box-content">    
+                    <p class="title-box-text">Online & App Security</p>
+                    <hr class="line">
+                    </hr>
+                    <span class="box-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae
+                        vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="bubble-icon"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
