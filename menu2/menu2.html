@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu 2</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(197, 194, 197);
+        }
+
+        .container {
+            height: 70px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 100px auto 0;
+            width: 900px;
+            height: 50px;
+            background-color: #56ab1c;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        nav a {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            font-size: 15px;
+            text-decoration: none;
+            text-align: center;
+            color: #e6f5ce;
+            line-height: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+        .sub-nav {
+            width: 900px;
+            height: 20px;
+            margin: 100px auto;
+            background-color: #e6f5ce;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            margin: 0 auto;
+        }
+
+        .arrow-up {
+            position: absolute;
+            padding: 0;
+            width: 0;
+            height: 0;
+            margin: 0 auto;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            transition: all 0.2s ease-out;
+        }
+
+        a:hover .arrow-up {
+            display: inline-block;
+            border-bottom: 8px solid #e6f5ce;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="#">HOME
+                <div class="arrow-up"></div>
+            </a>
+            <a href="#">BOOKING
+                <div class="arrow-up"></div>
+            </a>
+            <a href="#">PASSENGER INFORMATION
+                <div class="arrow-up"></div>
+            </a>
+            <a href="#">CUSTOMER SERVICE
+                <div class="arrow-up"></div>
+            </a>
+            <a href="#">ABOUT US
+                <div class="arrow-up"></div>
+            </a>
+            <a href="#">FANSHOP
+                <div class="arrow-up"></div>
+            </a>
+        </nav>
+        <div class="sub-nav"></div>
+    </div>
+</body>
+
+</html>
