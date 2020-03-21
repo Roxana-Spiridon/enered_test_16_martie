@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Menu vertical</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .container {
+                position: relative;
+                top: 0;
+                left: 0;
+                background-image: url("background.jpg");
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 58px;
+                overflow: hidden;
+            }
+
+            .header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgb(58, 78, 85);
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            .header-text {
+                color: #a7d624;
+                font-family: stencil std;
+                font-size: 15px;
+                margin: 0;
+                line-height: 60px;
+            }
+
+            .background {
+                position: absolute;
+                top: px;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+            }
+
+            .vertical-menu {
+                position: absolute;
+                top: 0px;
+                right: -220px;
+                margin: 0 auto;
+                width: 220px;
+                transition: right 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            }
+
+            .vertical-menu:hover {
+                right: 0px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                color: white;
+                font-size: 12px;
+                font-family: helvetica;
+                font-weight: normal;
+                text-transform: uppercase;
+                list-style: none;
+                width: 250px;
+                background-color: rgba(88, 109, 116, 0.6);
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 15px;
+                border-top: 2px solid rgba(58, 78, 85, 0.6)
+            }
+
+            li:hover {
+                color: #a7d624;
+            }
+
+            li:last-child {
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid rgba(58, 78, 85, 0.6);
+                color: #a7d624;
+            }
+
+            .burger-menu-icon {
+                position: absolute;
+                color: white;
+                font-size: 25px;
+                line-height: 60px;
+                top: 0px;
+                right: 220px;
+                padding-right: 20px;
+            }
+
+            .shopping-cart {
+                width: 15px;
+                margin-right: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="vertical-menu">
+                    <span class="burger-menu-icon">&#9776;</span>
+                    <p class="header-text">Curt's Special Recipe</p>
+                    <ul>
+                        <li class="text">home</li>
+                        <li class="text">gallery</li>
+                        <li class="text">where to buy</li>
+                        <li class="text">contact</li>
+                        <li class="text">shop</li>
+                        <li class="text">
+                            <img class="shopping-cart" src = "shopping-cart.svg">
+                            <span>(0)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
