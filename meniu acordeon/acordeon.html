@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            }
+
+        .active, .accordion:hover {
+            background-color: #ccc; 
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        var elementeAcordeon = [
+            {
+                tabName: "section 1",
+                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Magna fringilla urna porttitor rhoncus dolor purus non. Ut consequat semper viverra nam libero justo laoreet sit amet. Nec nam aliquam sem et tortor consequat id porta. Porttitor rhoncus dolor purus non enim praesent. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Orci sagittis eu volutpat odio facilisis mauris sit. Purus in mollis nunc sed id semper risus in. Tempus iaculis urna id volutpat. Volutpat diam ut venenatis tellus in metus vulputate eu. Morbi leo urna molestie at elementum eu facilisis sed odio. Tincidunt eget nullam non nisi est sit amet facilisis"
+            },
+            {
+                tabName: "section 2",
+                body: "Dui vivamus arcu felis bibendum ut. Blandit libero volutpat sed cras. Massa placerat duis ultricies lacus sed turpis tincidunt. Erat nam at lectus urna duis. Quam lacus suspendisse faucibus interdum posuere. Gravida in fermentum et sollicitudin ac orci. Pharetra convallis posuere morbi leo. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Enim praesent elementum facilisis leo vel. Leo in vitae turpis massa sed elementum. Feugiat nisl pretium fusce id velit ut tortor."
+            },
+            {
+                tabName: "section 3",
+                body: "Sem nulla pharetra diam sit amet nisl suscipit. Mauris ultrices eros in cursus turpis. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Vitae elementum curabitur vitae nunc. Arcu dui vivamus arcu felis bibendum ut. Facilisi morbi tempus iaculis urna id volutpat. Nulla facilisi nullam vehicula ipsum a arcu. Vitae et leo duis ut diam quam nulla porttitor massa. Vel pretium lectus quam id. Etiam tempor orci eu lobortis elementum nibh tellus. Rhoncus est pellentesque elit ullamcorper dignissim. Curabitur gravida arcu ac tortor. Lacus sed turpis tincidunt id. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Nunc congue nisi vitae suscipit tellus mauris a diam. Mauris augue neque gravida in. Tempus urna et pharetra pharetra massa massa. Integer feugiat scelerisque varius morbi enim nunc faucibus a. Id ornare arcu odio ut."
+            },
+            {
+                tabName: "section 4",
+                body: "Laoreet suspendisse interdum consectetur libero. Sit amet nisl purus in mollis nunc sed. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Tortor at auctor urna nunc id. Fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Tellus in hac habitasse platea dictumst. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Id ornare arcu odio ut sem. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Elementum curabitur vitae nunc sed velit dignissim. Risus commodo viverra maecenas accumsan. Risus pretium quam vulputate dignissim. Eu scelerisque felis imperdiet proin fermentum. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Sagittis vitae et leo duis. Duis at consectetur lorem donec. Vel turpis nunc eget lorem dolor sed viverra ipsum."
+            },
+            {
+                tabName: "section 5",
+                body: "Nibh venenatis cras sed felis eget. Eu ultrices vitae auctor eu augue ut. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Felis donec et odio pellentesque diam volutpat. Volutpat commodo sed egestas egestas fringilla. In est ante in nibh mauris cursus mattis molestie a. Mauris pharetra et ultrices neque ornare aenean euismod. Lacus vel facilisis volutpat est velit egestas. Aliquet sagittis id consectetur purus ut faucibus. Sed felis eget velit aliquet. Quis viverra nibh cras pulvinar mattis nunc sed. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Tempor id eu nisl nunc mi ipsum. Amet facilisis magna etiam tempor orci. Tellus id interdum velit laoreet id donec. Pellentesque elit eget gravida cum sociis natoque penatibus. Dui accumsan sit amet nulla facilisi morbi tempus iaculis."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', start);
+
+        function start(e) {
+            for (var i = 0; i < elementeAcordeon.length;i++){
+                var buttonElement = document.createElement('button');
+                buttonElement.className = "accordion";
+                buttonElement.innerText = elementeAcordeon[i].tabName;
+                var divElement = document.createElement('div');
+                divElement.className = "panel";
+                divElement.innerText = elementeAcordeon[i].body;
+                buttonElement.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    } else {
+                    panel.style.display = "block";
+                    }
+                });
+
+                document.body.appendChild(buttonElement);
+                document.body.appendChild(divElement);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
